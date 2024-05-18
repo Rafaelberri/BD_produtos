@@ -14,14 +14,13 @@ def inserir_dado_menu(conn):
     inserir_dado(conn, nome_tabela, colunas, valores)
     print("Dado inserido com sucesso.")
 
-# Outras funções relacionadas ao menu...
 
 def exibir_menu(conn):
     while True:
         print("\nEscolha uma ação:")
         print("1. Criar tabela")
         print("2. Inserir dado")
-        # Adicione outras opções de menu conforme necessário
+        
         escolha = input("Digite o número da ação (ou 's' para sair): ")
 
         if escolha == 's':
