@@ -1,5 +1,3 @@
-from db.manager import conectar
-
 def criar_tabela(conn, nome_tabela, colunas):
     cursor = conn.cursor()
     cursor.execute(f'CREATE TABLE IF NOT EXISTS {nome_tabela} ({colunas})')
@@ -23,10 +21,3 @@ def excluir_dado(conn, nome_tabela, where_clause):
     cursor.execute(f'DELETE FROM {nome_tabela} WHERE {where_clause}')
     conn.commit()
     cursor.close()
-
-def consultar_dados(conn, nome_tabela):
-    cursor = conn.cursor()
-    cursor.execute(f'SELECT * FROM {nome_tabela}')
-    dados = cursor.fetchall()
-    cursor.close()
-    return dados
